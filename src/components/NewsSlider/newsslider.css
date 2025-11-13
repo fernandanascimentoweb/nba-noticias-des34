@@ -1,0 +1,114 @@
+.news-slider{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #000;
+    padding: 60px 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.arrow:hover {
+    color: #fdb927;
+}
+
+.arrow.left {
+    left: 620px;
+}
+
+.arrow.right {
+    right: 620px;
+}
+
+.news-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+}
+
+.news {
+    background-color: #111;
+    border-radius: 12px;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.news:hover {
+    transform: translateY(-5px);
+}
+
+.news img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.news p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #ddd;
+}
+
+
+@media (max-width: 1024px) {
+    .arrow.left {
+        left: 40px;
+    }
+
+    .arrow.right {
+        right: 40px;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+
+    .news-slider {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .news-cards {
+        flex-direction: column;   /* empilha as notícias */
+        gap: 30px;
+    }
+
+    .news {
+        width: 90%;               
+        max-width: 380px;
+    }
+
+    .arrow {
+        font-size: 28px;
+    }
+
+    .arrow.left {
+        left: 20px;               
+    }
+
+    .arrow.right {
+        right: 20px;              
+    }
+}
+

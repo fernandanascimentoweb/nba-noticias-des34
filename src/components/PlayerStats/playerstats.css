@@ -1,0 +1,86 @@
+.player-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.player-stats h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.player-stats table {
+  width: 80%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background-color: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.player-stats thead {
+  background-color: #1e1e1e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.player-stats th,
+.player-stats td {
+  padding: 15px 20px;
+}
+
+.player-stats th {
+  color: #ccc;
+  font-weight: 500;
+}
+
+/* 🔹 CADA LINHA DE JOGADOR */
+.player-stats tbody tr {
+  border-bottom: 1px solid #222;
+}
+
+.player-stats tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* 🔹 ALINHAMENTO CORRETO: usa flex APENAS dentro da célula da imagem */
+.player-stats td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-stats td img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.player-stats td div p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #bbb;
+}
+
+
+
+@media (max-width: 768px) {
+    .player-stats td {
+        font-size: 12px;
+    }
+    .player-stats td img {
+        width: 30px;
+    }
+    .player-stats th {
+        font-size: 12px;
+    }
+}
